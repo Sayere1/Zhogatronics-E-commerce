@@ -14,7 +14,7 @@ export const syncUserCreation = inngest.createFunction(
     },
 
     {
-        event: "clerk/user.created"
+        event: "webhook-integration/user.created"
     },
     
 
@@ -39,7 +39,7 @@ export const syncUserUpdation = inngest.createFunction(
     },
 
     {
-        event: 'clerk/user-updated'
+        event: "webhook-integration/user.updated"
     },
    
 
@@ -65,7 +65,7 @@ export const syncUserDeletion = inngest.createFunction(
     },
 
     {
-        event: 'clerk/user-deleted'
+        event: "webhook-integration/user.deleted" 
     },
 
 
