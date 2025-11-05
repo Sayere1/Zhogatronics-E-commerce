@@ -5,7 +5,6 @@ import { inngest, syncUserCreation, syncUserDeletion, syncUserUpdation } from "@
 export const { GET, POST, PUT } = serve({
   client: inngest,
   functions: [
-    /* your functions will be passed here later! */
     syncUserCreation,
     syncUserUpdation,
     syncUserDeletion

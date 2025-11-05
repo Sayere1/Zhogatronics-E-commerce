@@ -5,6 +5,7 @@ import User from "@/models/User";
 // Create a client to send and receive events
 export const inngest = new Inngest({ id: "zhogatronics" });
 
+
 // ingest function to save users data to mongoose dataBase
 
 export const syncUserCreation = inngest.createFunction(
@@ -62,7 +63,7 @@ export const syncUserDeletion = inngest.createFunction(
     },
 
     {
-        event: 'clerk-user-deleted'
+        event: 'clerk/user-deleted'
     },
 
     async ({event}) => {

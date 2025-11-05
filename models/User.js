@@ -13,4 +13,8 @@ const User = mongoose.models.user || mongoose.model("user", userSchema)
 
 export default User
 
-//dhd
+//mongodb+srv://yerecode_db_user:zho123ABC@cluster0.mniw2hb.mongodb.net/?appName=Cluster0
+
+//qhcNuiG21zTGKy1e
+
+//mongodb+srv://yerecode_db_user:qhcNuiG21zTGKy1e@cluster0.f2qak83.mongodb.net/?appName=Cluster0
