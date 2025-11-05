@@ -14,7 +14,7 @@ async function connectDB() {
 
     if (!cached.promise) {
         const opts = {
-            bufferCommand: false
+            bufferCommands: false
         }
 
         cached.promise = (await mongoose.connect(`${process.env.MONGODB_URI}/zhogatronics`, opts)).then( mongoose => {
