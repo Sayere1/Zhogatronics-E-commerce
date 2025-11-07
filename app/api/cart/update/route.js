@@ -16,7 +16,7 @@ export async function POST(request) {
         const user = await User.findById(userId)
 
         user.cartItems = cartData
-        await user.save()
+        user.save()
 
         return NextResponse.json({ success: true })
 
