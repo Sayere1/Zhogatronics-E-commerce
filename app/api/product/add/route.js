@@ -1,5 +1,5 @@
 import connectDB from "@/config/db";
-import authSeller from "@/lib/authSeller";
+import authAdmin from "@/lib/authAdmin";
 import Product from "@/models/Product";
 import { getAuth } from "@clerk/nextjs/server";
 import { v2 as cloudinary } from "cloudinary";
@@ -18,9 +18,9 @@ export async function POST(request) {
         
         const { userId } = getAuth(request)
 
-        const isSeller = await authSeller(userId)
+        const isAdmin = await authAdmin(userId)
 
-        if (!isSeller) {
+        if (!isAdmin) {
             return NextResponse.json({ success: false, message: 'not authorized, get authurization'})
         }
 

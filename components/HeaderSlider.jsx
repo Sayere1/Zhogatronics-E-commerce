@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { assets } from "@/assets/assets";
 import Image from "next/image";
+import BrandCarousel from "./BrandCarousel";
 
 const HeaderSlider = () => {
   const sliderData = [
@@ -44,6 +45,7 @@ const HeaderSlider = () => {
   };
 
   return (
+    
     <div className="overflow-hidden relative w-full">
       <div
         className="flex transition-transform duration-700 ease-in-out"
@@ -93,6 +95,9 @@ const HeaderSlider = () => {
           ></div>
         ))}
       </div>
+      <div className="mt-10">
+      <BrandCarousel /> 
+    </div>
     </div>
   );
 };

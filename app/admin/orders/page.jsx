@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { assets, orderDummyData } from "@/assets/assets";
 import Image from "next/image";
 import { useAppContext } from "@/context/AppContext";
-import Footer from "@/components/seller/Footer";
+import Footer from "@/components/admin/Footer";
 import Loading from "@/components/Loading";
 import axios from "axios";
 import toast from "react-hot-toast";
@@ -15,12 +15,12 @@ const Orders = () => {
     const [orders, setOrders] = useState([]);
     const [loading, setLoading] = useState(true);
 
-    const fetchSellerOrders = async () => {
+    const fetchAdminOrders = async () => {
         try {
             
             const token = await getToken()
 
-            const { data } = await axios.get('/api/order/seller-orders', {headers: {token}})
+            const { data } = await axios.get('/api/order/admin-orders', {headers: {token}})
 
             if (data.success) {
                 setOrders(data.orders)
@@ -36,7 +36,7 @@ const Orders = () => {
 
     useEffect(() => {
         if (user) {
-            fetchSellerOrders();
+            fetchAdminOrders();
         }
     }, [user]);
 

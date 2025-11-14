@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { assets, productsDummyData } from "@/assets/assets";
 import Image from "next/image";
 import { useAppContext } from "@/context/AppContext";
-import Footer from "@/components/seller/Footer";
+import Footer from "@/components/admin/Footer";
 import Loading from "@/components/Loading";
 import axios from "axios";
 import toast from "react-hot-toast";
@@ -15,12 +15,12 @@ const ProductList = () => {
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(true)
 
-  const fetchSellerProduct = async () => {
+  const fetchAdminProduct = async () => {
     try {
       
       const token = await getToken()
 
-      const { data } = await axios.get('/api/product/seller-list', {headers: {token}})
+      const { data } = await axios.get('/api/product/admin-list', {headers: {token}})
 
       if (data.success) {
         setProducts(data.products)
@@ -36,7 +36,7 @@ const ProductList = () => {
 
   useEffect(() => {
     if (user) {
-      fetchSellerProduct();
+      fetchAdminProduct();
     }
   }, [user])
 

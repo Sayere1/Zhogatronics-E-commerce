@@ -47,6 +47,10 @@ import product_details_page_apple_earphone_image3 from "./product_details_page_a
 import product_details_page_apple_earphone_image4 from "./product_details_page_apple_earphone_image4.png";
 import product_details_page_apple_earphone_image5 from "./product_details_page_apple_earphone_image5.png";
 
+
+import Customer_support from "./Call_icon.png"
+
+
 export const assets = {
   logo,
   search_icon,
@@ -425,4 +429,13 @@ export const addressDummyData = [
     "state": "State",
     "__v": 0
   }
+]
+
+
+export const brands = ["Laptops", "Phones", "Headphones", "Speakers", "Watch", "Earbuds"];
+
+export const ourSevicesData = [
+    { title: "Free Shipping", description: "Enjoy fast, affordable delivery on every order, just reliable doorstep.", icon: Customer_support, accent: '#05DF72' },
+    { title: "14 Days easy Return", description: "Change your mind? No worries. Return any item within 14 days.", icon: Customer_support, accent: '#FF8904' },
+    { title: "24/7 Customer Support", description: "We're here for you. Get expert help with our customer support.", icon: Customer_support, accent: '#A684FF' }
 ]
