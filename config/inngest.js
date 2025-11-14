@@ -4,7 +4,7 @@ import User from "@/models/User";
 import Order from "@/models/order";
 
 // Create a client to send and receive events
-export const inngest = new Inngest({ id: "zhogatronics" });
+export const inngest = new Inngest({ id: "zhogatronics-ecom" });
 
 
 // ingest function to save users data to mongoose dataBase
