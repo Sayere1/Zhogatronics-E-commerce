@@ -81,7 +81,7 @@ const OrderSummary = () => {
   }, [user])
 
   return (
-    <div className="w-full md:w-96 bg-gray-500/5 p-5">
+    <div className="w-full md:w-96 bg-gray-500/5 p-5 rounded">
       <h2 className="text-xl md:text-2xl font-medium text-gray-700">
         Order Summary
       </h2>
@@ -140,7 +140,7 @@ const OrderSummary = () => {
               placeholder="Enter promo code"
               className="flex-grow w-full outline-none p-2.5 text-gray-600 border"
             />
-            <button className="bg-orange-600 text-white px-9 py-2 hover:bg-orange-700">
+            <button className="bg-gray-900 text-white px-9 py-2 hover:bg-gray-500 rounded">
               Apply
             </button>
           </div>
@@ -168,7 +168,7 @@ const OrderSummary = () => {
         </div>
       </div>
 
-      <button onClick={createOrder} className="w-full bg-orange-600 text-white py-3 mt-5 hover:bg-orange-700">
+      <button onClick={createOrder} className="w-full bg-gray-900 text-white py-3 mt-5 hover:bg-gray-700 rounded">
         Place Order
       </button>
     </div>

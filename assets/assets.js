@@ -21,6 +21,9 @@ import star_icon from "./star_icon.svg";
 import redirect_icon from "./redirect_icon.svg";
 import star_dull_icon from "./star_dull_icon.svg";
 import header_headphone_image from "./header_headphone_image.png";
+import header_laptop_image from "./header_laptop.png";
+import header_jblspeaker_image from "./header_jblspeaker.png";
+import header_camera_image from "./header_camera.png";
 import header_playstation_image from "./header_playstation_image.png";
 import header_macbook_image from "./header_macbook_image.png";
 import macbook_image from "./macbook_image.png";
@@ -74,6 +77,9 @@ export const assets = {
   star_icon,
   redirect_icon,
   star_dull_icon,
+  header_camera_image,
+  header_jblspeaker_image,
+  header_laptop_image,
   header_headphone_image,
   header_playstation_image,
   header_macbook_image,

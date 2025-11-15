@@ -6,6 +6,7 @@ import { useAppContext } from "@/context/AppContext";
 import Image from "next/image";
 import { useClerk, UserButton } from "@clerk/nextjs";
 
+
 const Navbar = () => {
 
   const { isAdmin, router, user } = useAppContext();
@@ -28,12 +29,14 @@ const Navbar = () => {
         </Link>
         <Link href="/about-us" className="hover:text-gray-900 transition">
           About Us
+          <hr className='hidden w-2/4 border-none h-[1.5px] bg-gray-700' />
         </Link>
         <Link href="/" className="hover:text-gray-900 transition">
           Contact
+          <hr className='hidden w-2/4 border-none h-[1.5px] bg-gray-700' />
         </Link>
 
-        {isAdmin && <button onClick={() => router.push('/admin')} className="text-xs border px-4 py-1.5 rounded-full">Admin Dashboard</button>}
+        {isAdmin && <button onClick={() => router.push('/admin')} className="text-xs text-white border px-4 py-1.5 rounded-full bg-gray-500">Admin Dashboard</button>}
 
       </div>
 
@@ -62,12 +65,13 @@ const Navbar = () => {
         {user ?
           <>
 <UserButton>
+
             <UserButton.MenuItems>
               <UserButton.Action label="Home" labelIcon={<HomeIcon />} onClick={() => router.push("/")} />
             </UserButton.MenuItems>
 
             <UserButton.MenuItems>
-              <UserButton.Action label="Products" labelIcon={<BoxIcon />} onClick={() => router.push("/all-products")} />
+              <UserButton.Action label="Shop" labelIcon={<BoxIcon />} onClick={() => router.push("/all-products")} />
             </UserButton.MenuItems>
 
             
