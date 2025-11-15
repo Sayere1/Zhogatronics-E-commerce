@@ -4,7 +4,7 @@ import User from "@/models/User";
 import Order from "@/models/order";
 
 // Create a client to send and receive events
-export const inngest = new Inngest({ id: "zhogatronics" });
+export const inngest = new Inngest({ id: "zhogacooms" });
 
 
 // ingest function to save users data to mongoose dataBase
@@ -15,7 +15,7 @@ export const syncUserCreation = inngest.createFunction(
     },
 
     {
-        event: "webhook-integration/user.created"
+        event: "clerk/user.created"
     },
     
 
@@ -40,7 +40,7 @@ export const syncUserUpdation = inngest.createFunction(
     },
 
     {
-        event: "webhook-integration/user.updated"
+        event: "clerk/user.updated"
     },
    
 
@@ -66,7 +66,7 @@ export const syncUserDeletion = inngest.createFunction(
     },
 
     {
-        event: "webhook-integration/user.deleted" 
+        event: "clerk/user.deleted" 
     },
 
 
