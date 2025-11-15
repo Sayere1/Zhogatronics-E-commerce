@@ -91,7 +91,7 @@ export const createUserOrder = inngest.createFunction(
     },
 
     {
-        event: "webhook-integration/order/created"
+        event: "clerk/order/created"
     },
 
     async ({events}) => {
